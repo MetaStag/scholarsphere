@@ -1,8 +1,23 @@
+import React from 'react';
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import Upload from "./Components/Upload";
+
 function App() {
   return (
-    <div className="bg-blue-500 text-white p-4">
-      <h1 className="text-2xl font-bold">Hello, Tailwind!</h1>
+    <div>
+    <Navbar></Navbar>
+      <Router>
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/upload" element={<Upload />} />
+        </Routes>
+z    </Router>
+    <Footer></Footer>
     </div>
+
   );
 }
 
