@@ -41,16 +41,13 @@ function Upload() {
       </button>
       <h1 className="text-5xl font-bold mb-4">Upload CSV Datasheet</h1>
       <p className="text-xl mb-20">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod
-        egestas dolor, vitae dictum est tempus quis. Phasellus euismod, libero
-        vel vestibulum viverra. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Donec euismod egestas dolor, vitae dictum est tempus
-        quis. Phasellus euismod, libero vel vestibulum viverra.
+        Here, you can upload your CSV datasheet which contains the basic information
+        of the professors' whose information you want to fetch
       </p>
-      <div className="flex flex-col bg-neutral p-5 items-start rounded-xl">
+      <div className="flex flex-col bg-gray-100 p-5 items-start rounded-xl mb-20">
         <span className="text-xl font-bold">File Upload</span>
         <span>Upload your document here</span>
-        <div className="flex flex-col border-2 border-dashed border-primary self-center p-5 rounded-md w-full py-10 px-5 m-5">
+        <div className="flex flex-col border-2 border-dashed border-primary self-center p-5 rounded-md w-full py-10 px-5 m-5 bg-gray-300">
           <div className="self-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

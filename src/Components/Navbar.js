@@ -10,9 +10,9 @@ function Navbar() {
         </Link>
       </div>
       <div className="max-w-64">
-        <ul className="menu menu-horizontal bg-base-200 rounded-box mt-6 w-44">
+        <ul className="menu menu-horizontal bg-base-200 rounded-box w-44">
           <li>
-            <a className="tooltip" data-tip="Home">
+            <a className="tooltip tooltip-bottom" data-tip="Home">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -30,7 +30,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a className="tooltip" data-tip="Details">
+            <a className="tooltip tooltip-bottom" data-tip="Details">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -48,7 +48,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a className="tooltip" data-tip="Stats">
+            <a className="tooltip tooltip-bottom" data-tip="Stats">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
