@@ -10,7 +10,7 @@ function Navbar() {
         </Link>
       </div>
       <div className="max-w-64">
-        <ul className="menu menu-horizontal bg-base-200 rounded-box w-44">
+        <ul className="menu menu-horizontal bg-gray-200 rounded-box w-44">
           <li>
             <a className="tooltip tooltip-bottom" data-tip="Home">
               <svg

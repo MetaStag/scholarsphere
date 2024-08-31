@@ -43,9 +43,8 @@ function Table() {
               <td>{profile.Location}</td>
               <td>
                 <button
-                  className="btn btn-ghost btn-xs"
-                  onClick={() => handleProfileClick(profile)}
-                >
+                  className="btn btn-ghost btn-xs p-2"
+                  onClick={() => handleProfileClick(profile)}>
                   PROFILE
                 </button>
               </td>
