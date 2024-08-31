@@ -1,4 +1,3 @@
-// src/Components/About.js
 import React from "react";
 import { useLocation } from "react-router-dom";
 
@@ -14,26 +13,29 @@ function About() {
     <div className="mt-20 text-center">
       <div className="flex items-center justify-center mb-6 relative mx-64">
         <div className="avatar">
-          <div className="ring-primary ring-offset-base-100 w-48 h-48 rounded-full ring ring-offset-2">
+          <div className="ring-primary ring-offset-base-100 w-48 h-48 rounded-full ring ring-offset-2 overflow-hidden">
             <img
-              src={profile.image}
-              alt={profile.name}
-              className="w-full h-full object-cover rounded-full"
+              src={
+                profile.image ||
+                "https://www.freeiconspng.com/uploads/profile-icon-9.png"
+              } // Use the new image URL
+              alt={profile.Author}
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
         <div className="ml-6 text-left">
-          <h2 className="text-3xl font-bold mb-4">{profile.name}</h2>
+          <h2 className="text-3xl font-bold mb-4">{profile.Author}</h2>
           <p className="text-xl mb-3">
-            {profile.job}.{profile.college}
+            {profile.Designation}. {profile.Institute}
           </p>
-          <p className="text-xl">{profile.country}</p>
-          <p className="text-xl">{profile.mail}</p>
+          <p className="text-xl">{profile.Location}</p>
+          <p className="text-xl">{profile.Email}</p>
         </div>
       </div>
 
       <div className="flex flex-row">
-        {/* Sort/Filter */}
+        {/* Sort/Filter section */}
         <div className="flex flex-row mx-64">
           <div>
             <div className="collapse collapse-arrow bg-base-200">

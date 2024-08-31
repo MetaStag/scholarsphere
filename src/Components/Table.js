@@ -37,8 +37,7 @@ function Table() {
         <tbody>
           {profiles.map((profile, index) => (
             <tr key={index}>
-              <td>{profile.Name}</td>{" "}
-              {/* Adjust column names according to your CSV headers */}
+              <td>{profile.Author}</td>
               <td>{profile.Designation}</td>
               <td>{profile.Institute}</td>
               <td>{profile.Location}</td>
