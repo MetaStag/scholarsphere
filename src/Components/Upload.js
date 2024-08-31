@@ -28,10 +28,10 @@ function Upload() {
         adipiscing elit. Donec euismod egestas dolor, vitae dictum est tempus
         quis. Phasellus euismod, libero vel vestibulum viverra
       </p>
-      <div className="flex flex-col bg-neutral p-5 items-start rounded-xl">
+      <div className="flex flex-col bg-neutral p-5 items-start rounded-xl bg-gray-100">
         <span className="text-xl font-bold">File Upload</span>
         <span>Upload your document here</span>
-        <div className="flex flex-col border-2 border-dashed border-primary self-center p-5 rounded-md w-full py-10 px-5 m-5">
+        <div className="flex flex-col border-2 border-dashed border-primary self-center p-5 rounded-md w-full py-10 px-5 m-5 bg-gray-200">
           <div className="self-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

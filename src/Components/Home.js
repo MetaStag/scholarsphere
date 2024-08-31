@@ -9,11 +9,15 @@ function Home() {
           <div className="max-w-lg">
             <h1 className="text-5xl font-bold mb-4">Scholar Sphere</h1>
             <p className="text-xl mb-20">
-            Seamless publication summaries and reports tailored to bolster your academic profile
-            and catalyze your career. Efficient synopses that come in handy when applying for tenure or grants,
-            showcasing your research expertise at the forefront.
+              Seamless publication summaries and reports tailored to bolster
+              your academic profile and catalyze your career. Efficient synopses
+              that come in handy when applying for tenure or grants, showcasing
+              your research expertise at the forefront.
             </p>
-            <Link to="/upload" className="btn btn-secondary btn-lg btn-wide rounded-xl">
+            <Link
+              to="/upload"
+              className="btn btn-secondary btn-lg btn-wide rounded-xl"
+            >
               <span>Get Started</span>
               <svg
                 className="w-5 h-5 relative -translate-y-1"
