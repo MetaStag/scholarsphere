@@ -45,7 +45,7 @@ function About() {
         </div>
       </div>
 
-      <div className="flex flex-row justify-center bg-gray-300 p-10 ">
+      <div className="flex flex-row justify-center bg-gray-300 p-10 mb-20">
         <div className="overflow-x-auto transform scale-125">
           <table className="table-auto w-full text-lg">
             {/* head */}
