@@ -18,6 +18,7 @@ function App() {
           <Route path="/upload" element={<Upload />} />
           <Route path="/table" element={<Table />} />{" "}
           <Route path="/about" element={<About />} />
+          <Route path="/report" element={<Report />} />
         </Routes>
       </Router>
       <Footer />
