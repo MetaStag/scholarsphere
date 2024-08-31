@@ -21,7 +21,6 @@ function App() {
           <Route path="/report" element={<Report />} />
         </Routes>
       </Router>
-      <Footer />
     </div>
   );
 }
