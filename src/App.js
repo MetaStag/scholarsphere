@@ -10,7 +10,7 @@ import Report from "./Components/Report";
 
 function App() {
   return (
-    <div>
+    <div className="data-theme='light'">
       <Router>
     <Navbar></Navbar>
         <Routes>

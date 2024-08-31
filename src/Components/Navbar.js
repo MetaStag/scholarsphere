@@ -23,8 +23,8 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-error mx-2 p-3">Log In</button>
-        <button className="btn btn-error p-3">Sign Up</button>
+        <button className="btn btn-primary mx-2 p-3">Log In</button>
+        <button className="btn btn-secondary p-3">Sign Up</button>
       </div>
     </div>
   );
