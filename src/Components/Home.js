@@ -1,44 +1,57 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <div className="hero bg-base-200 py-20">
-        <div className="hero-content text-center">
-          <div className="max-w-lg">
-            <h1 className="text-5xl font-bold mb-4">Scholar Sphere</h1>
-            <p className="text-xl mb-20">
-              Seamless publication summaries and reports tailored to bolster
-              your academic profile and catalyze your career. Efficient synopses
-              that come in handy when applying for tenure or grants, showcasing
-              your research expertise at the forefront.
+      {/* Hero Section */}
+      <section className="bg-white dark:bg-gray-900">
+        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+          <div className="mr-auto place-self-center lg:col-span-7">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+              Payments tool for software companies
+            </h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+              From checkout to global sales tax compliance, companies around the
+              world use Flowbite to simplify their payment stack.
             </p>
             <Link
               to="/upload"
-              className="btn btn-secondary btn-lg btn-wide rounded-xl"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 cursor-pointer"
             >
-              <span>Get Started</span>
+              Get started
               <svg
-                className="w-5 h-5 relative -translate-y-1"
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
                 />
               </svg>
             </Link>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            >
+              Speak to Sales
+            </a>
+          </div>
+          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+              alt="mockup"
+            />
           </div>
         </div>
-      </div>
-      {/* different color for top and bottom border style={{borderTopColor: "#4A90E2", borderBottomColor: "#E94E77"}}  */}
+      </section>
+
+      {/* Marquee Section */}
       <div className="border-t-2 border-b-2 mt-20">
         <marquee>
           <span className="px-32 text-xl font-bold">Google Scholar</span>
@@ -48,52 +61,59 @@ function Home() {
         </marquee>
       </div>
 
-      <div className="flex flex-row justify-center items-center p-10">
-        <div className="flex flex-col">
-          <span className="text-2xl bg-accent text-white p-3 rounded-lg">
-            Your research expedition, amplified.
-          </span>
-          <span className="max-w-96 text-lg mt-2">
-            Unravel the full potential of your publication of your publications
-            with strengthened efficiency and ease of access
-          </span>
+      {/* Cards Section */}
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-8">
+        <div className="card bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
-        <img
-          className="max-w-96 max-h-96 mx-5"
-          src="https://www.discoverphds.com/wp-content/uploads/2020/09/What-is-Research-Purpose-of-Research.png"
-        />
-      </div>
-      <div className="flex flex-row justify-center items-center p-10">
-        <img
-          className="max-w-96 max-h-96 mx-5"
-          src="https://www.contents.ai/wp-content/uploads/2024/05/IA-e-contenuti-il-futuro-del-content-marketing.png"
-        />
-        <div className="flex flex-col">
-          <span className="text-2xl bg-accent text-white p-3 rounded-lg">
-            Heighten your visibility
-          </span>
-          <span className="max-w-96 text-lg mt-2">
-            Stand out in the crowd by a cohesive display of your publications
-            all at one compiled place
-          </span>
+
+        <div className="card bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="card bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center items-center p-10">
-        <div className="flex flex-col">
-          <span className="text-2xl bg-accent text-white p-3 rounded-lg">
-            Unleash your research connoisseur
-          </span>
-          <span className="max-w-96 text-lg mt-2">
-            With the futuristic data-driven insights and decisive action
-            features, elevate your automated
-          </span>
-        </div>
-        <img
-          className="max-w-96 max-h-96 mx-5"
-          src="https://blog.pixentia.com/hs-fs/hubfs/Using%20People%20Analytics%20to%20Survive%20the%20Great%20Resignation.jpg?width=1200&name=Using%20People%20Analytics%20to%20Survive%20the%20Great%20Resignation.jpg"
-        />
-      </div>
-      <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+
+      {/* Footer Section */}
+      <footer className="footer footer-center bg-base-200 text-base-content rounded p-10 mt-8">
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
