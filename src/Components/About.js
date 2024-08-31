@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom"; // Correct import for both useLocation and useNavigate
+import { useLocation, useNavigate } from "react-router-dom";
 
 function About() {
   const { state } = useLocation();
@@ -45,59 +45,51 @@ function About() {
         </div>
       </div>
 
-      <div className="flex flex-row">
-        {/* Sort/Filter section */}
-        <div className="flex flex-row mx-64">
-          <div>
-            <div className="collapse collapse-arrow bg-base-200">
-              <input type="radio" name="my-accordion-2" defaultChecked />
-              <div className="collapse-title text-xl font-medium">Sort</div>
-              <div className="collapse-content">
-                <p>hello</p>
-              </div>
-            </div>
-            <div className="collapse collapse-arrow bg-base-200">
-              <input type="radio" name="my-accordion-2" />
-              <div className="collapse-title text-xl font-medium">Filter</div>
-              <div className="collapse-content">
-                <p>hello</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="overflow-x-auto mx-5">
-          <table className="table-auto w-full text-base text-lg">
+      <div className="flex flex-row justify-center bg-gray-300 p-10 ">
+        <div className="overflow-x-auto transform scale-125">
+          <table className="table-auto w-full text-lg">
             {/* head */}
             <thead>
               <tr>
-                <th className="p-4">#</th>
-                <th className="p-4">Title</th>
-                <th className="p-4">Cited By</th>
-                <th className="p-4">Year</th>
+                <th className="p-6">#</th>
+                <th className="p-6">Title</th>
+                <th className="p-6">Cited By</th>
+                <th className="p-6">Year</th>
               </tr>
             </thead>
             <tbody>
               {/* row 1 */}
               <tr>
-                <th className="p-4">1</th>
-                <td className="p-4">Cy Ganderton</td>
-                <td className="p-4">412</td>
-                <td className="p-4">2014</td>
+                <th className="p-6">1</th>
+                <td className="p-6">Cy Ganderton</td>
+                <td className="p-6">412</td>
+                <td className="p-6">2014</td>
               </tr>
               {/* row 2 */}
               <tr>
-                <th className="p-4">2</th>
-                <td className="p-4">Hart Hagerty</td>
-                <td className="p-4">223</td>
-                <td className="p-4">2009</td>
+                <th className="p-6">2</th>
+                <td className="p-6">Hart Hagerty</td>
+                <td className="p-6">223</td>
+                <td className="p-6">2009</td>
               </tr>
               {/* row 3 */}
               <tr>
-                <th className="p-4">3</th>
-                <td className="p-4">Brice Swyre</td>
-                <td className="p-4">616</td>
-                <td className="p-4">2020</td>
+                <th className="p-6">3</th>
+                <td className="p-6">Brice Swyre</td>
+                <td className="p-6">616</td>
+                <td className="p-6">2020</td>
+              </tr>
+              <tr>
+                <th className="p-6">4</th>
+                <td className="p-6">Cy Ganderton</td>
+                <td className="p-6">412</td>
+                <td className="p-6">2014</td>
+              </tr>
+              <tr>
+                <th className="p-6">5</th>
+                <td className="p-6">Cy Ganderton</td>
+                <td className="p-6">412</td>
+                <td className="p-6">2014</td>
               </tr>
             </tbody>
           </table>
