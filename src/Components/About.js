@@ -1,13 +1,18 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom"; // Correct import for both useLocation and useNavigate
 
 function About() {
   const { state } = useLocation();
   const { profile } = state || {};
+  const navigate = useNavigate();
 
   if (!profile) {
     return <p>No profile data available</p>;
   }
+
+  const handleGenerateReport = () => {
+    navigate("/report", { state: { profile } });
+  };
 
   return (
     <div className="mt-20 text-center">
@@ -18,7 +23,7 @@ function About() {
               src={
                 profile.image ||
                 "https://www.freeiconspng.com/uploads/profile-icon-9.png"
-              } // Use the new image URL
+              }
               alt={profile.Author}
               className="w-full h-full object-cover"
             />
@@ -31,6 +36,12 @@ function About() {
           </p>
           <p className="text-xl">{profile.Location}</p>
           <p className="text-xl">{profile.Email}</p>
+          <button
+            onClick={handleGenerateReport}
+            className="btn btn-primary mt-4"
+          >
+            Generate Report
+          </button>
         </div>
       </div>
 
@@ -54,12 +65,42 @@ function About() {
             </div>
           </div>
         </div>
-        <div>
-          <div className="bg-gray-200 p-5 max-w-auto">
-            <span>Title</span>
-            <span>Cited by</span>
-            <span>Year</span>
-          </div>
+
+        <div className="overflow-x-auto mx-5">
+          <table className="table-auto w-full text-base text-lg">
+            {/* head */}
+            <thead>
+              <tr>
+                <th className="p-4">#</th>
+                <th className="p-4">Title</th>
+                <th className="p-4">Cited By</th>
+                <th className="p-4">Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* row 1 */}
+              <tr>
+                <th className="p-4">1</th>
+                <td className="p-4">Cy Ganderton</td>
+                <td className="p-4">412</td>
+                <td className="p-4">2014</td>
+              </tr>
+              {/* row 2 */}
+              <tr>
+                <th className="p-4">2</th>
+                <td className="p-4">Hart Hagerty</td>
+                <td className="p-4">223</td>
+                <td className="p-4">2009</td>
+              </tr>
+              {/* row 3 */}
+              <tr>
+                <th className="p-4">3</th>
+                <td className="p-4">Brice Swyre</td>
+                <td className="p-4">616</td>
+                <td className="p-4">2020</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Upload from "./Components/Upload";
@@ -12,7 +11,7 @@ function App() {
   return (
     <div className="data-theme='light'">
       <Router>
-    <Navbar></Navbar>
+        <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<Upload />} />
@@ -21,7 +20,6 @@ function App() {
           <Route path="/report" element={<Report />} />
         </Routes>
       </Router>
-      <Footer />
     </div>
   );
 }
