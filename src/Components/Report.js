@@ -1,5 +1,7 @@
 // src/Components/Report.js
 import React from "react";
+import BarC from "./BarC";
+import PieC from "./PieC";
 
 function Report() {
   return (
@@ -20,6 +22,10 @@ function Report() {
         <span>Stanford University, USA</span>
         <span className="text-blue-700">janesmith@Stanford.edu.in</span>
       </div>
+      </div>
+      <div className="flex flex-row m-10">
+        <BarC />
+        <PieC />
       </div>
       <div className="stats shadow mt-10">
         <div className="stat place-items-center">
