@@ -51,7 +51,7 @@ function Upload() {
         <span className="block text-gray-600 mb-4">
           Upload your document here
         </span>
-        <div className="border-2 border-dashed border-blue-400 p-6 rounded-md bg-gray-200">
+        <div className="border-2 border-dashed border-blue-400 p-6 mx-20 rounded-md bg-gray-200">
           <div className="flex justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +68,7 @@ function Upload() {
               />
             </svg>
           </div>
+          <div className="flex flex-col">
           <span className="text-lg text-gray-700 mb-2">
             Drag your file to start uploading
           </span>
@@ -78,6 +79,7 @@ function Upload() {
             className="file-input w-full max-w-xs mx-auto"
             onChange={handleFileUpload}
           />
+          </div>
         </div>
         <span className="block text-gray-600 mt-2">
           Only .csv files are supported

@@ -5,6 +5,7 @@ function Table() {
   const navigate = useNavigate();
   const { state } = useLocation();
   const profiles = state?.data || []; // Extract data from location state
+  console.log(profiles.n)
 
   const handleProfileClick = (profile) => {
     navigate("/about", { state: { profile } });
