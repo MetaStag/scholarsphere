@@ -45,54 +45,25 @@ function About() {
         </div>
       </div>
 
-      <div className="flex flex-row justify-center bg-gray-300 p-10 ">
-        <div className="overflow-x-auto transform scale-125">
-          <table className="table-auto w-full text-lg">
-            {/* head */}
-            <thead>
-              <tr>
-                <th className="p-6">#</th>
-                <th className="p-6">Title</th>
-                <th className="p-6">Cited By</th>
-                <th className="p-6">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              <tr>
-                <th className="p-6">1</th>
-                <td className="p-6">Cy Ganderton</td>
-                <td className="p-6">412</td>
-                <td className="p-6">2014</td>
-              </tr>
-              {/* row 2 */}
-              <tr>
-                <th className="p-6">2</th>
-                <td className="p-6">Hart Hagerty</td>
-                <td className="p-6">223</td>
-                <td className="p-6">2009</td>
-              </tr>
-              {/* row 3 */}
-              <tr>
-                <th className="p-6">3</th>
-                <td className="p-6">Brice Swyre</td>
-                <td className="p-6">616</td>
-                <td className="p-6">2020</td>
-              </tr>
-              <tr>
-                <th className="p-6">4</th>
-                <td className="p-6">Cy Ganderton</td>
-                <td className="p-6">412</td>
-                <td className="p-6">2014</td>
-              </tr>
-              <tr>
-                <th className="p-6">5</th>
-                <td className="p-6">Cy Ganderton</td>
-                <td className="p-6">412</td>
-                <td className="p-6">2014</td>
-              </tr>
-            </tbody>
-          </table>
+      <div className="flex flex-row justify-center p-10">
+        <div className="transform scale-125">
+        <table className="table w-full">
+        {/* head */}
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Citations count</th>
+            <th>Publication count</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>Author</td>
+              <td>Designation</td>
+              <td>Institute</td>
+            </tr>
+        </tbody>
+      </table>
         </div>
       </div>
     </div>
