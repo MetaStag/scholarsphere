@@ -44,7 +44,8 @@ function Table() {
               <td>
                 <button
                   className="btn btn-ghost btn-xs p-2"
-                  onClick={() => handleProfileClick(profile)}>
+                  onClick={() => handleProfileClick(profile)}
+                >
                   PROFILE
                 </button>
               </td>
