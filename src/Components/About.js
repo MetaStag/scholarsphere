@@ -14,6 +14,28 @@ function About() {
     navigate("/report", { state: { profile } });
   };
 
+  const renderLinksAndYears = (links, years) => {
+    if (!links || !years) return null;
+    const linkArray = links.split(",");
+    const yearArray = years.split(",");
+
+    return linkArray.map((link, index) => (
+      <tr key={index}>
+        <td>
+          <a
+            href={link.trim()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline block"
+          >
+            {link.trim()}
+          </a>
+        </td>
+        <td>{yearArray[index]?.trim() || "N/A"}</td>
+      </tr>
+    ));
+  };
+
   return (
     <div className="mt-20 text-center">
       <div className="flex items-center justify-center mb-6 relative mx-64">
@@ -47,23 +69,16 @@ function About() {
 
       <div className="flex flex-row justify-center p-10">
         <div className="transform scale-125">
-        <table className="table w-full">
-        {/* head */}
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Citations count</th>
-            <th>Publication count</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td>Author</td>
-              <td>Designation</td>
-              <td>Institute</td>
-            </tr>
-        </tbody>
-      </table>
+          <table className="table max-w-32">
+            {/* head */}
+            <thead>
+              <tr>
+                <th>Contributions</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody>{renderLinksAndYears(profile.Links, profile.Year)}</tbody>
+          </table>
         </div>
       </div>
     </div>
