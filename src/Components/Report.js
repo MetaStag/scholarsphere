@@ -48,7 +48,7 @@ function Report() {
       </div>
 
       <div className="border-2 mt-5 p-3 rounded-lg">
-        <h1 className="text-bold text-2xl">Publication Summary</h1>
+        <h1 className="text-bold text-2xl py-2">Publication Summary</h1>
         <div className="text-primary-800 flex justify-between w-full">
           <span className="flex-1 text-center text-lg">
             Conference Publications: 80
