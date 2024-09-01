@@ -32,30 +32,34 @@ function Upload() {
   };
 
   return (
-    <div className="mt-20 mx-auto text-center max-w-4xl">
+    <div className="mt-20 mx-auto text-center max-w-5xl p-6 bg-white shadow-lg rounded-lg">
       <button
         onClick={handleBackClick}
-        className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mb-6"
+        className="btn btn-primary mb-6 px-6 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105"
       >
-        Previous
+        Go Back
       </button>
-      <h1 className="text-5xl font-bold mb-4">Upload CSV Datasheet</h1>
-      <p className="text-xl mb-20">
-        Here, you can upload your CSV datasheet which contains the basic information
-        of the professors' whose information you want to fetch
+      <h1 className="text-4xl font-bold mb-4 text-gray-800">
+        Upload CSV Datasheet
+      </h1>
+      <p className="text-lg mb-10 text-gray-600">
+        Upload your CSV datasheet containing basic information of the
+        professors.
       </p>
-      <div className="flex flex-col bg-gray-100 p-5 items-start rounded-xl mb-20">
-        <span className="text-xl font-bold">File Upload</span>
-        <span>Upload your document here</span>
-        <div className="flex flex-col border-2 border-dashed border-primary self-center p-5 rounded-md w-full py-10 px-5 m-5 bg-gray-300">
-          <div className="self-center">
+      <div className="bg-gray-100 p-6 rounded-xl shadow-md">
+        <span className="text-xl font-semibold">File Upload</span>
+        <span className="block text-gray-600 mb-4">
+          Upload your document here
+        </span>
+        <div className="border-2 border-dashed border-blue-400 p-6 rounded-md bg-gray-200">
+          <div className="flex justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="w-12 h-12 text-blue-500"
             >
               <path
                 strokeLinecap="round"
@@ -64,17 +68,24 @@ function Upload() {
               />
             </svg>
           </div>
-          <span className="text-lg">Drag your file to start uploading</span>
-          <span className="text-lg">--------or--------</span>
+          <span className="text-lg text-gray-700 mb-2">
+            Drag your file to start uploading
+          </span>
+          <span className="text-lg text-gray-600 mb-4">--------or--------</span>
           <input
             type="file"
             accept=".csv"
-            className="file-input w-full max-w-xs self-center"
+            className="file-input w-full max-w-xs mx-auto"
             onChange={handleFileUpload}
           />
         </div>
-        <span>Only support .csv files</span>
-        <button onClick={handleNextClick} className="btn btn-primary self-end">
+        <span className="block text-gray-600 mt-2">
+          Only .csv files are supported
+        </span>
+        <button
+          onClick={handleNextClick}
+          className="btn btn-primary mt-6 px-6 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105"
+        >
           Next
         </button>
       </div>
